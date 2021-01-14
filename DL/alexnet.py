@@ -4,14 +4,17 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 
 
-# desired input_shape=(224, 224, 3)
-
-def jho(train_ds, valid_ds, num_class, max_epochs):
+def jho(train_ds, valid_ds, num_class):
+    # parameters
+    max_epochs  = 2
+    # desired input_shape=(224, 224, 3)
+    input_shape = (224, 224, 3)
     
     # AlexNet model
     model = models.Sequential([
         # 1st convolution 
-        layers.Conv2D(filters=96, kernel_size=(11,11), strides=(4,4), activation='relu', input_shape=(224,224,3)),
+        layers.Conv2D(filters=96, kernel_size=(11,11), strides=(4,4), activation='relu', 
+                      input_shape=input_shape),
         layers.BatchNormalization(),
         layers.MaxPool2D(pool_size=(3,3), strides=(2,2)),
         

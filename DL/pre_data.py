@@ -1,7 +1,10 @@
 import tensorflow as tf
 
 
-def data(xtrain, xvalid, xtest, ytrain, yvalid, ytest, size, batch_size):
+def alexnet(xtrain, xvalid, xtest, ytrain, yvalid, ytest, batch_size):
+    # parameters
+    size_1 = 224
+    size_2 = 224
     
     # better train & test format for tensorflow    
     train_ds = tf.data.Dataset.from_tensor_slices((xtrain, ytrain))
@@ -18,7 +21,7 @@ def data(xtrain, xvalid, xtest, ytrain, yvalid, ytest, size, batch_size):
         # Normalize images to have a mean of 0 and standard deviation of 1
         image = tf.image.per_image_standardization(image)
         # Resize images from 32x32 to 277x277
-        image = tf.image.resize(image, (size, size))
+        image = tf.image.resize(image, (size_1, size_2))
         
         return image, label
 
