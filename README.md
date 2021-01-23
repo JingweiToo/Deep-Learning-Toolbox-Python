@@ -16,3 +16,14 @@
 This toolbox offers some popular deep neural networks. Examples are given on the `Demo` files.  
 * AlexNet
 * CNN
+
+
+## Requirement
+* Python 3
+* Numpy
+* Scikit-learn
+* Matplotlib
+* Tensorflow
+* Keras
+* Theano
+
