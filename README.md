@@ -16,6 +16,9 @@
 This toolbox offers some popular deep neural networks. Examples are given on the `Demo` files.  
 * AlexNet
 * CNN
+* GoogLeNet ( transfer learning )
+* VggNet ( transfer learning )
+* ResNet ( transfer learning )
 
 
 ## Requirement
